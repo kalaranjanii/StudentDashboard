@@ -1,35 +1,42 @@
 import React from "react";
 import "../Style/Dashboard.css";
-// import EmployeeList1 from "../Employee/emplist";
-// import Product from "./Product";
-// import EmployeeList1 from "../Employee/emplist";
-// import EmployeeList1 from "../Employee/emplist";
+import { Link } from "react-router-dom";
 
 const Dashboard = ({ employees }) => {
-
-
-  // const Nextpage=()=>{
-  //   return(<>
-  //   <p>haii</p>
-  //   {/* <EmployeeList1/> */}
-  //   </>)
-
-  // }
   return (
     <>
       <div>
-        <h1>dashboard page</h1>
+        <h1>Dashboard</h1>
       </div>
       <div className="boxes">
-        <div className="box1">
-          <h1>{employees.length}</h1>
-        </div>
-        <div className="box1"></div>
-        <div className="box1"></div>
-        <div className="box1"></div>
-        {/* <button >click</button> */}
-
-        {/* <EmployeeList1/> */}
+        <Link to="/emplist">
+          <div className="box1">
+            <h2>{employees.length}</h2>
+            <h3>Employee</h3>
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </Link>
+        <Link to="/emplist">
+          <div className="box2">
+            <h2>34</h2>
+            <h3>Internship</h3>
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </Link>
+        <Link to="/emplist">
+          <div className="box3">
+            <h2>64</h2>
+            <h3>Present</h3>
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </Link>
+        <Link to="/emplist">
+          <div className="box4">
+            <h2>9</h2>
+            <h3>Clients</h3>
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </Link>
       </div>
     </>
   );

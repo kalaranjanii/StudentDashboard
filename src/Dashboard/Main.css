@@ -1,60 +1,103 @@
-*{
-    margin:0;
-    padding:0;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
-.container{
-    display:flex;
-    /* position: fixed;
+.container {
+  display: flex;
+  /* position: fixed;
     top:0; */
 }
-main{
-    width: 100%;
-    padding: 20px;
+main {
+  width: 100%;
+  padding: 20px;
 }
-.sidebar{
-    background: #000;
-    color: #fff;
-    height: 100vh;
-    width: 200px;
-    transition: all 0.5s;
-    /* position: fixed; */
+.sidebar {
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+  /* position: fixed; */
 }
-.top_section{
-    display: flex;
-    align-items:center;
-    padding:20px 15px;
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
 }
-.logo{
-    font-size: 30px;
+.logo {
+  font-size: 30px;
 }
-.bars{
-    display: flex;
-    font-size: 25px;
-    margin-left: 50px;
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
 }
-.link{
-    display: flex;
-    color: #fff;
-    padding: 10px 15px;
-    gap: 15px;
-    transition: all 0.5s;
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
 }
-.link:hover{
-    background:lightskyblue;
-    color: #000;
-    transition: all 0.5s;
+.link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
 }
-.active{
-    background: lightskyblue;
-    color: #000;
+.active {
+  background: lightskyblue;
+  color: #000;
 }
-.icon, .link_text{
-    font-size: 20px;
+.icon,
+.link_text {
+  font-size: 20px;
 }
-.btn{
-    border: 1px solid black;
-    color: red;
-    width: 200px;
-    height: 200px;
+.btn {
+  border: 1px solid black;
+  color: red;
+  width: 200px;
+  height: 200px;
+}
+
+
+/* dropdown */
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.link1 {
+  font-size: 20px;
+  margin-top: -17px;
+  margin-left: 15px;
+  padding: 5px 10px;
+  /* padding: 10px 15px; */
+
+  /* gap: 15px; */
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.icon1 {
+  font-size: 20px;
+  margin-left: 13px;
+  padding-top: 15px;
+  /* margin-top: 15px; */
+}
+.submenu {
+  margin-top: -10px;
+  padding-bottom: 0px;
+  cursor: pointer;
+}
+.submenu:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.submenu .arrow-icon {
+  /* border: 1px solid red; */
+  font-size: 20px;
+  margin-bottom: -5px;
+  margin-left: 15px;
 }

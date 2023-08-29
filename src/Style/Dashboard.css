@@ -1,13 +1,89 @@
-* {
-  margin: 0%;
-  padding: 0%;
+
+.dashboard-container {
+  text-align: center;
+  margin: 20px;
 }
-.box1 {
-  width: 300px;
-  height: 150px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+/* Style for the header containing the icon and text */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
+
+/* Style for the icon */
+.dashboard-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+/* Style for the boxes container */
 .boxes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style for individual box */
+.box1 {
+  width: 250px;
+  height: 100px;
+  background-color: rgb(216, 30, 114);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: rgba(2, 30, 82, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+.box2 {
+  width: 250px;
+  height: 100px;
+  background-color: green;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: rgba(2, 30, 82, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}.box3 {
+  width: 250px;
+  height: 100px;
+  background-color: orange;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: rgba(2, 30, 82, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}.box4 {
+  width: 250px;
+  height: 100px;
+  background-color: rgb(36, 164, 207);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: rgba(2, 30, 82, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+i {
+  font-size: 60px;
+  margin-left: 50px;
+  color: rgb(255, 102, 0);
+}
+h2 {
+  margin-top: -50px;
+  margin-left: -200px;
+  position: absolute;
+  color: white;
+}
+h3 {
+  margin-top: 40px;
+  margin-right: -20px;
+  color: white;
 }

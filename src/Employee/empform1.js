@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { Link } from "react-router-dom";
 import "../Style/empform1.css";
 
-const EmployeeForm1 = ({ onEmployeeSubmit }) => {
+const EmployeeForm1 = ({ onEmployeeSubmit}) => {
   const [Firstname, setFirstName] = useState("");
   const [Lastname, setLastname] = useState("");
   const [Fathername, setFathername] = useState("");
@@ -54,7 +54,6 @@ const EmployeeForm1 = ({ onEmployeeSubmit }) => {
     setFathername("");
     setMathername("");
     setEmail("");
-    setEmail("");
     setAddress("");
     setDob("");
     setBloodgroup("");
@@ -69,57 +68,67 @@ const EmployeeForm1 = ({ onEmployeeSubmit }) => {
     setPhoto("");
   };
 
+  
   return (
     <>
       <div className="main">
-        <h2>Add Employee Details</h2>
+        <h1>Student Data Entry Form</h1>
         <div className="box">
           <Link className="one" to="/addemp">
-            Add Employee
+            <i class="fa-solid fa-users"></i>
+            <h2>Add Student</h2>
           </Link>
           <Link className="two" to="/emplist">
-            Employee List
+            <i class="fa-solid fa-users"></i>
+            <h2>View Student</h2>
           </Link>
         </div>
 
         <form onSubmit={handleSubmit}>
+          <h2 className="h2">Student Entry Form</h2>
+
           <div>
-            <label>Firstname:</label>
+            <label>First Name:</label>
             <input
               type="text"
               value={Firstname}
+              placeholder="First Name"
               onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
           <div>
-            <label>Lastname:</label>
+            <label>Last Name:</label>
             <input
               type="text"
               value={Lastname}
+              placeholder="Last Name"
               onChange={(e) => setLastname(e.target.value)}
             />
           </div>
           <div>
-            <label>Fathername:</label>
+            <label>Father Name:</label>
             <input
               type="text"
               value={Fathername}
+              placeholder="Father Name"
               onChange={(e) => setFathername(e.target.value)}
             />
           </div>
           <div>
-            <label>Mathername:</label>
+            <label>Mather Name:</label>
             <input
               type="text"
               value={Mathername}
+              placeholder="Mather Name"
               onChange={(e) => setMathername(e.target.value)}
             />
           </div>
           <div>
             <label>Email:</label>
             <input
-              type="text"
+              type="email"
               value={Email}
+              placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -128,54 +137,80 @@ const EmployeeForm1 = ({ onEmployeeSubmit }) => {
             <input
               type="text"
               value={Address}
+              placeholder="Address"
               onChange={(e) => setAddress(e.target.value)}
             />
           </div>
           <div>
-            <label>Dob:</label>
+            <label>DOB:</label>
             <input
-              type="text"
+              type="date"
               value={Dob}
+              placeholder="DOB"
               onChange={(e) => setDob(e.target.value)}
             />
           </div>
           <div>
-            <label>Bloodgroup:</label>
-            <input
+            <label>Blood Group:</label>
+            {/* <input
               type="text"
               value={Bloodgroup}
+              placeholder="Blood Group"
               onChange={(e) => setBloodgroup(e.target.value)}
-            />
+              
+            /> */}
+            <select
+              className="input"
+              value={Bloodgroup}
+              required
+              onChange={(e) => setBloodgroup(e.target.value)}
+            >
+              <option value="" disabled selected>
+                Blood Group
+              </option>
+              <option>A Positive</option>
+              <option>A Negative</option>
+              <option>B Positive</option>
+              <option>B Negative</option>
+              <option>AB Positive</option>
+              <option>AB Negative</option>
+              <option>O Positive</option>
+              <option>O Negative</option>
+            </select>
           </div>
           <div>
             <label>Contact:</label>
             <input
-              type="text"
+              type="tel"
               value={Contact}
+              placeholder="Contact"
               onChange={(e) => setContact(e.target.value)}
             />
           </div>
           <div>
-            <label>FatherNumber:</label>
+            <label>Father Number:</label>
             <input
-              type="text"
+              type="tel"
               value={FatherNumber}
+              placeholder="Father Number"
               onChange={(e) => setFatherNumber(e.target.value)}
             />
           </div>
           <div>
-            <label>MatherNumber:</label>
+            <label>Mather Number:</label>
             <input
-              type="text"
+              type="tel"
               value={MatherNumber}
+              placeholder="Mather Number"
               onChange={(e) => setMatherNumber(e.target.value)}
             />
           </div>
           <div>
-            <label>MaritalStatus:</label>
+            <label>Marital Status:</label>
             <input
               type="text"
               value={MaritalStatus}
+              placeholder="Marital Status"
               onChange={(e) => setMaritalStatus(e.target.value)}
             />
           </div>
@@ -184,30 +219,34 @@ const EmployeeForm1 = ({ onEmployeeSubmit }) => {
             <input
               type="text"
               value={Gender}
+              placeholder="Gender"
               onChange={(e) => setGender(e.target.value)}
             />
           </div>
           <div>
-            <label>SSLCMark:</label>
+            <label>SSLC Mark:</label>
             <input
               type="text"
               value={SSLCMark}
+              placeholder="SSLC Mark"
               onChange={(e) => setSSLCMark(e.target.value)}
             />
           </div>
           <div>
-            <label>SSLCSchoolname:</label>
+            <label>SSLC School Name:</label>
             <input
               type="text"
               value={SSLCSchoolname}
+              placeholder="SSLC School Name"
               onChange={(e) => setSSLCSchoolname(e.target.value)}
             />
           </div>
           <div>
-            <label>SSLCPercentage:</label>
+            <label>SSLC Percentage:</label>
             <input
-              type="text"
+              type="number"
               value={SSLCPercentage}
+              placeholder="SSLC Percentage"
               onChange={(e) => setSSLCPercentage(e.target.value)}
             />
           </div>
@@ -215,7 +254,9 @@ const EmployeeForm1 = ({ onEmployeeSubmit }) => {
             <label>Photo:</label>
             <input type="file" accept="image/*" onChange={handlePhotoChange} />
           </div>
-          <button type="submit">Submit</button>
+          <button className="button" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </>

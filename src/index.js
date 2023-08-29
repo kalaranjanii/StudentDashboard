@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+// import Appnew from "./edit/edit";
+// import Dropdown from "./Dropdown/Dropdown";
 // import App4 from "./Employee/emp4";
 // import App3 from "./Employee/emp3";
 // import App2 from "./Employee/emp1";
@@ -17,5 +19,6 @@ root.render(
     {/* <App3/> */}
     {/* <App4/> */}
     <Main/>
+    {/* <Appnew/> */}
   </React.StrictMode>
 );

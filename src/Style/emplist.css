@@ -1,0 +1,31 @@
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+.employee-table th{
+  background-color:gray ;
+}
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.delete-button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+  }
+.h2{
+  color: black;
+  /* margin-top: ; */
+}
